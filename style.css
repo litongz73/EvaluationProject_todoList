@@ -1,43 +1,245 @@
-.app{
+.app {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   border-radius: 5px;
   width: fit-content;
-  padding:10px;
+  padding: 10px;
   text-align: center;
-  gap:10px;
+  gap: 10px;
   align-items: stretch;
 
 }
 
-html{
+button {
+  z-index: 999;
+}
+
+button[type="submit"] {
+  display: flex;
+  background-color: #008cba;
+  height: 30px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  align-items: center;
+}
+
+html {
   display: flex;
   justify-content: center;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: row;
-  gap:10px;
+  gap: 10px;
+  justify-content: center;
 }
 
-.todo-list{
-  padding:0;
+.todo-list {
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  gap:10px;
+  gap: 5px;
 }
 
-.todo-list li{
+.finished-list {
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 5px;
+
+}
+
+
+.todo-list li {
   display: flex;
   justify-content: space-between;
+  gap: 1px;
+  background-color: #e6e2d3;
+  border-radius: 3px;
+  min-width: 40vw;
+
 }
-.todo-list li span{
+
+
+.todo-list li span {
   flex-grow: 1;
   text-align: center;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+ 
+  padding: 5px;
+  font-size: 14px;
+
+}
+
+.finished-list li {
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  background-color: #e6e2d3;
+  border-radius: 3px;
+  min-width: 40vw;
 }
 
 
+.finished-list li span {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+  padding-left: 20px;
+
+  padding: 5px;
+  font-size: 14px;
+}
+
+
+
+.tasksContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+
+.delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.complete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.uncomplete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+
+  border: 1px solid black;
+  border-radius: 25%;
+}
+
+.delete-btn svg {
+
+  fill: #c94c4c;
+  background-color: #c94c4c;
+}
+
+svg path{
+  pointer-events: none;
+
+}
+
+svg {
+  pointer-events: none;
+}
+
+.delete-btn svg path {
+  stroke: white;
+  stroke-width: 1.4px;
+}
+
+.complete-btn svg {
+  fill: white;
+  background-color: #4caf50;
+}
+
+.uncomplete-btn svg {
+  fill: white;
+  background-color: #4caf50;
+}
+
+.edit-btn svg {
+  fill: white;
+  background-color: #008cba;
+}
+
+span {
+  font-size: medium;
+  height: 20px;
+  justify-content: center;
+  user-select: none;
+}
+
+.input {
+  width: 40vw;
+  border-radius: 5px;
+}
+
+.edit-input {
+  min-width: calc(40vw - 113px);
+  height: 20px;
+  margin: 5px;
+  box-sizing: border-box;
+  align-content: center;
+}
+
+.PendingTasks {
+  padding: 0 10px 10px 10px;
+  border-radius: 5px;
+  border: 2px solid #e6e2d3;
+
+}
+
+.CompletedTasks {
+  padding: 0 10px 10px 10px;
+  border-radius: 5px;
+  border: 2px solid #e6e2d3;
+}
+
+.subtitle {
+    text-align: left;
+    margin:5px;
+    font-size: small;
+    font-weight: bold;
+}
+
+.tasksContainer{
+    display: flex;
+    min-height: 70vh;
+}

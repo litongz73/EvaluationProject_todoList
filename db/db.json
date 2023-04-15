@@ -1,8 +1,14 @@
 {
   "todos": [
     {
-      "content": "sdsd",
+      "content": "Task 1",
+      "complete": false,
       "id": 1
+    },
+    {
+      "content": "Finished Task",
+      "complete": true,
+      "id": 2
     }
   ]
 }
