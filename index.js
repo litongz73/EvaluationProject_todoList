@@ -251,7 +251,7 @@ const Controller = ((view, model) => {
                 const id = event.target.id;
                 //console.log("id", typeof id);
                 model.updateTodo(+id, { complete: true }).then((data) => {
-                    state.todos = state.todos.filter((todo) => todo.id !== +id);
+                    state.todos = state.todos;
                 });
             }
         });
@@ -260,7 +260,7 @@ const Controller = ((view, model) => {
                 const id = event.target.id;
                 //console.log("id", typeof id);
                 model.updateTodo(+id, { complete: false }).then((data) => {
-                    state.todos = state.todos.filter((todo) => todo.id !== +id);
+                    state.todos = state.todos;
                 });
             }
         });
